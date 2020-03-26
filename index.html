@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <link href="build/tailwind.css" type="text/css" rel="stylesheet" />
+    <script src="build/vue.js" type="application/javascript"></script>
+</head>
+<body>
+<div id="app">
+<header class="bg-black md:flex md:justify-between md:items-center md:px-6 md:py-6 ">
+    <div class="flex items-center justify-between px-4 py-3 md:p-0">
+        <div>
+            <img class="h-4 md:h-8 object-contain" src="img/logo.png" alt="Impact46">
+        </div>
+        <div class="md:hidden">
+            <button @click="isMobileNavOption = !isMobileNavOption" type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path v-if="isMobileNavOption" fill-rule="evenodd"
+                          d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
+                    <path v-if="!isMobileNavOption" fill-rule="evenodd"
+                          d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <nav :class="isMobileNavOption ? 'block' : 'hidden'" class="px-2 pt-2 pb-4 md:flex md:p-0 text-sm">
+        <a href="#"
+           class="block px-2 py-1 text-white rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:opacity-75  md:mt-0 md:ml-2">
+            Approach
+        </a>
+        <a href="#"
+           class="block px-2 py-1 text-white rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:opacity-75  md:mt-0 md:ml-2">
+            Services for Donors
+        </a>
+        <a href="#"
+           class="block px-2 py-1 text-white rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:opacity-75  md:mt-0 md:ml-2">
+            Services for Non-Profits
+        </a>
+        <a href="#"
+           class="block px-2 py-1 text-white rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:opacity-75  md:mt-0 md:ml-2">
+            Founder & Team
+        </a>
+        <a href="#"
+           class="block px-2 py-1 text-white rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:opacity-75  md:mt-0 md:ml-2">
+            Clients
+        </a>
+        <a href="#"
+           class="block px-2 py-1 text-white rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:opacity-75  md:mt-0 md:ml-2">
+            Contact
+        </a>
+    </nav>
+</header>
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/city.jpg" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">We accelerate social impact.</h1>
+    </div>
+</div>
+
+<div class="py-12 px-6 md:px-16 leading-loose">
+    <p class="font-bold">Impact46 is a social impact accelerator.</p>
+    <p class="text-gray-900 mt-2">Impact46 is a social impact accelerator.
+        We work with philanthropists, impact investors, foundations and CSR departments, as well as non-profits and social enterprises. We provide world-class
+        experience, tools and tech to help foster their social impact. </p>
+</div>
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/approach.jpeg" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Our Approach</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">Impact46 is an innovative social impact firm.</p>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide"> We raise both the quality and accessibility of strategic consulting for key players in the <br />
+            philanthropic market. </p>
+    </div>
+</div>
+
+<div class="py-12 px-6 md:px-16 leading-loose">
+    <p class="text-gray-900">Impact46 raises both the quality and accessibility of strategic consulting for key players in the philanthropic market. It
+        does so by offering:</p>
+
+    <p class="font-bold mt-6">World-class experience</p>
+    <p class="text-gray-900 mt-2">World-class experience
+        i46 strives to provide the highest-quality social impact consulting available globally. i46 Founder Nicola Crosta directly oversees every consulting
+        project, working closely with some of the world’s most experienced social impact practitioners.</p>
+
+    <p class="font-bold mt-6">Robust tools</p>
+    <p class="text-gray-900 mt-2">Robust tools
+        Clients benefit from advanced tools, methodologies and tech to design, implement and measure social impact programs.</p>
+
+    <p class="font-bold mt-6">Day-to-day support</p>
+    <p class="text-gray-900 mt-2">Day-to-day support
+        i46 believes in the value of strategy, but is also committed to supporting clients in the day-to-day challenges of implementation. </p>
+</div>
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/services-for-donors.png" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Services for Donors</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">Impact46 offers world-class services to donors, Foundations, CSR departments and
+            impact investors. These services allow donors to transform their vision for impact into a reality. </p>
+    </div>
+</div>
+
+
+<div class="py-12 px-6 md:px-16 leading-loose">
+
+    <p class="font-bold">5 Services for Donors </p>
+
+    <p class="font-bold mt-6">Impact Strategy</p>
+
+    <p class="text-gray-900 mt-2">i46 helps donors define their social impact strategy or review existing strategies. We leverage our Impact Compass tool to
+        assess and maximize your impact. </p>
+
+    <p class="font-bold mt-6">Impact Selection</p>
+    <p class="text-gray-900 mt-2">i46 helps donors select high-impact non-profits among any sector or geographic scope. We also carry out due diligence of
+        existing Portfolio grantees. </p>
+
+    <p class="font-bold mt-6">Impact Monitoring</p>
+    <p class="text-gray-900 mt-2">i46 helps monitor Portfolios of social organizations and track their social impact. Our team can deliver professional Impact
+        Reports that are tailored to your needs. </p>
+
+    <p class="font-bold mt-6">Impact Communication</p>
+    <p class="text-gray-900 mt-2">i46 helps donors communicate social impact in a professional, ethical manner, within and outside of their organization. We
+        also help them track their contribution to the SDGs. </p>
+
+    <p class="font-bold mt-6">Special Initiatives</p>
+    <p class="text-gray-900 mt-2">Whether the goal is to open a new Foundation, start a global initiative for social impact or set up a social enterprise
+        incubator, i46 provides exceptional experience to donors and social investors building their social impact endeavors. </p>
+</div>
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/services-investors.png" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Services for Responsible Investors</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">Impact46 offers services to investors who aim to clearly define, maximize and
+            measure the social impact of their investments. They include a wide range of asset owners and investors: Private Banks, Private Equity funds, Family
+            Offices, Pension Funds and Impact investment Funds. </p>
+    </div>
+</div>
+
+<div class="py-12 px-6 md:px-16 leading-loose">
+
+    <p class="font-bold">4 Services for Responsible Investors</p>
+
+    <p class="font-bold mt-6">Deal Sourcing</p>
+
+    <p class="text-gray-900 mt-2">Impact46 supports investors’ capacity to source investments that have a positive social and environmental impact. We do so by
+        helping you develop the tools and criteria to ‘filter’ leads from a social impact perspective. We also support sourcing by performing targeted thematic
+        and geographic Ecosystem Researches that help identify potential investees and/or sourcing partners. </p>
+
+    <p class="font-bold mt-6">Due Diligence</p>
+    <p class="text-gray-900 mt-2">Impact46 supports responsible investors in the development of processes and tools that add a ‘social lens’ to the investment
+        process. We help define criteria to be utilized during the due diligence of potential investees to assess their effective capacity to deliver social
+        impact. Our approach is pragmatic: beyond traditional ‘ESG checklists’, we develop tools that are tailored to the size and specific needs of the
+        investor. If useful, we can join – as advisors – your investment committee(s) and contribute our experience to your investment decisions. </p>
+
+    <p class="font-bold mt-6">Portfolio Management and Impact monitoring.</p>
+    <p class="text-gray-900 mt-2">We help you develop systems and tools to constantly monitor the social impact of your portfolio. This includes helping you
+        define the process and criteria to be used for each of your investees and the way data from your portfolio can be effectively aggregated in a dashboard
+        that supports your decisions and provides material for internal and external communication on your investments’ social impact. </p>
+
+    <p class="font-bold mt-6">Capacity Development of Investees</p>
+    <p class="text-gray-900 mt-2">Impact46 has developed a robust methodology to support your investees and help them define and assess their social impact. Our
+        approach is designed to help maximize your Portfolio companies’ social impact and strengthen their capacity to measure and communicate it to investors.</p>
+</div>
+
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/services-for-nonprofits.jpeg" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Services for Non-Profits</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">Impact46 offers services to non-profits and social enterprises that help maximize
+            their social impact. Services allow non-profits to outsource work where they lack expertise and to upskill their teams by working with experienced
+            professionals. </p>
+    </div>
+</div>
+
+
+<div class="py-12 px-6 md:px-16 leading-loose">
+
+    <p class="font-bold">3 Services for Non-Profits and Social Enterprises</p>
+
+    <p class="font-bold mt-6">Strategic Review</p>
+
+    <p class="text-gray-900 mt-2">The Review offers an opportunity for the leadership to step back from day-to-day operations, assess strategic opportunities
+        and plan for the future. We apply our signature Impact Compass to carry out a thorough analysis of Programs, Operations and Governance and to offer
+        actionable recommendations.</p>
+
+    <p class="font-bold mt-6">Day-to-Day Support</p>
+    <p class="text-gray-900 mt-2">Through the unique i46 retainer model, we are available for day-to-day support to the organization and to help achieve the
+        milestones of its strategy. We offer day-to-day support in:</p>
+    <ul class="mt-2 list-disc px-8">
+        <li>Program and project design</li>
+        <li>Monitoring and evaluation</li>
+        <li>Fundraising strategy, initiatives and events</li>
+        <li>Communications and digital presence</li>
+        <li>Governance, HR and internal Policies</li>
+    </ul>
+
+    <p class="font-bold mt-6">Social Impact Evaluations</p>
+    <p class="text-gray-900 mt-2">We can co-design with the organization and implement evaluations that quantify their social impact, as a whole or on a
+        specific program or project.</p>
+</div>
+
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/founder.jpeg" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Founder, Board & Team</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">Impact46 is more than a team. </p>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide"> It’s a network of individuals who care deeply about social impact
+            and use their unique expertise to help achieve it. </p>
+    </div>
+</div>
+
+<div class="py-12 px-6 md:px-16 leading-loose">
+    <div class="md:flex">
+        <div class="md:w-1/2 lg:w-1/3">
+            <img class="w-full h-full md:h-64 object-contain" src="img/nicola-bw.jpeg" alt="">
+            <p class="font-bold text-2xl mt-4 text-center">
+                Nicola Crosta
+            </p>
+            <p class="font-semibold text-xl text-gray-700 text-center">
+                Founder and CEO
+            </p>
+        </div>
+        <div class="w-full mt-6 md:mt-0 sm:ml-4">
+            <p class="text-gray-900">Nicola Crosta is one of the world’s leading experts on impact investment, philanthropy and non-profit management, with
+                extensive experience among a wide range of impact-driven organizations. </p>
+
+            <p class="text-gray-900 mt-6"><strong>UN and OECD:</strong> Nicola held senior management positions in the world’s top international organizations for a total of 18
+                years. At the United Nations in New York, Nicola played a key role in helping to define the global Sustainable Development Goals (SDGs).</p>
+
+            <p class="text-gray-900 mt-2"><strong>Epic Foundation:</strong> As Executive Vice President and Board Member, Nicola helped to build one of the most
+                innovative philanthropic Foundations from the ground up. At Epic, Nicola oversaw one of the largest NGO and donor surveys ever performed
+                globally and the development of cutting-edge non-profits’ due diligence and social impact monitoring methodologies.</p>
+
+            <p class="text-gray-900 mt-2"><strong>Baan Dek Foundation:</strong> Nicola is the Founder of Baan Dek, an award-winning social enterprise that provides access to
+                services to thousands of migrant kids across Southeast Asia. In recent years, Baan Dek has become a strategic implementing partner of UNICEF and
+                won the MIT Award for Social Innovation (Solve 2017).</p>
+
+            <p class="text-gray-900 mt-2"><strong>Author and lecturer:</strong> Nicola’s articles and books on social impact, development economics and philanthropy have
+                been extensively translated and published globally. He has been visiting lecturer on social impact and innovation at MIT, Harvard, Sciences Po
+                and Hong Kong University.</p>
+
+            <p class="mt-6 text-gray-900">
+                Nicola Crosta directly oversees support to every client. Depending on the nature and scope of the task, i46 selects a team from some of the
+                finest, most experienced social impact practitioners globally. These world-class professionals represent diverse areas of expertise, ensuring
+                impact among any sector or geographic scope.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="container mx-auto p-8">
+    <p class="font-bold text-2xl text-center">Advisory Board</p>
+
+    <div class="flex flex-row flex-wrap -mx-2 mt-6">
+        <div class="w-full sm:w-1/2 lg:w-1/3 mb-4 px-2">
+            <div class="relative bg-white rounded border h-112">
+                <picture class="block bg-gray-200 border-b h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Board-Patrick.jpg" alt="Patrick Fournier">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        Patrick Fournier
+                    </h3>
+                    <p class="mt-3 md:mt-0 md:text-sm">
+                        Chairman | CalpersHotels & HotelFactory
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2  lg:w-1/3  mb-4 px-2">
+            <div class="relative bg-white rounded border h-112 md:h-116">
+                <picture class="block bg-gray-200 border-b  h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Assia-Grazioli.png" alt="Assia Grazioli">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        Assia Grazioli
+                    </h3>
+                    <p class="mt-3 text-sm">Founder & Partner | Muse Capital</p>
+                    <p class="text-sm">Board of Directors | Juventus Football Club</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2  lg:w-1/3  mb-4 px-2">
+            <div class="relative bg-white rounded border h-112 md:h-116">
+                <picture class="block bg-gray-200 border-b  h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Kennedy_Odede.jpg" alt="Kennedy Odede">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        Kennedy Odede
+                    </h3>
+                    <p class="mt-3 text-sm">
+                        Founder & CEO | SHOFCO
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2  lg:w-1/3  mb-4 px-2">
+            <div class="relative bg-white rounded border h-112 md:h-116">
+                <picture class="block bg-gray-200 border-b  h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Viria.jpg" alt="Viria Vichit-Vadakan">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        Viria Vichit-Vadakan
+                    </h3>
+                    <p class="mt-3 text-sm">
+                        Co-Founder | LearnX
+                    </p>
+                    <p class="text-sm">
+                        Harvard Business School
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2  lg:w-1/3  mb-4 px-2">
+            <div class="relative bg-white rounded border h-112 md:h-116">
+                <picture class="block bg-gray-200 border-b  h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Ruben_Vardanyan.jpg" alt="Ruben Vardanyan">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        Ruben Vardanyan
+                    </h3>
+                    <p class="mt-3 text-sm">
+                        Co-Founder | Aurora Humanitarian Initiative
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2  lg:w-1/3  mb-4 px-2">
+            <div class="relative bg-white rounded border h-112 md:h-116">
+                <picture class="block bg-gray-200 border-b  h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Fallback.jpg" alt="François Dassault">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        François Dassault
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full sm:w-1/2  lg:w-1/3  mb-4 px-2">
+            <div class="relative bg-white rounded border h-112 md:h-116">
+                <picture class="block bg-gray-200 border-b  h-80 overflow-hidden">
+                    <img class="w-full h-full object-cover" src="img/Allison.jpg" alt="Allison Sanders">
+                </picture>
+                <div class="p-4">
+                    <h3 class="text-lg font-bold">
+                        Allison Sanders
+                    </h3>
+                    <p class="mt-3 text-sm">
+                        Advisory Board Coordinator
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/clients.jpeg" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Clients</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">The organizations supported by i46 are extremely diverse. </p>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide"> What they have in common is a serious commitment to social impact. </p>
+    </div>
+</div>
+
+<div class="container mx-auto p-8">
+    <div class="flex flex-row flex-wrap -mx-2 mt-6">
+        <div class="w-full md:w-1/2 md:w-1/3 mb-4 px-2">
+            <div class="relative bg-white">
+                <h3 class="font-bold text-center">Foundations</h3>
+                <div class="flex flex-row flex-wrap mt-12">
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-messi.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-fbs.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-aurora.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-iffff.PNG" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:w-1/3 mb-4 px-2">
+            <div class="relative bg-white">
+                <h3 class="font-bold text-center">Corporates</h3>
+                <div class="flex flex-row flex-wrap mt-12">
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-generali.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-rcrt.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-lcj+group.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-ffl.PNG" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:w-1/3 mb-4 px-2">
+            <div class="relative bg-white">
+                <h3 class="font-bold text-center">Social Enterprises</h3>
+                <div class="flex flex-row flex-wrap mt-12">
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-social-builder-logo.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-pnnnn.PNG" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-steps.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                    <div class="w-1/2 md:w-1/2 mb-4 px-2">
+                        <picture class="block h-32 overflow-hidden">
+                            <img class="w-full h-full object-contain" src="img/client-dao.png" alt="Allison Sanders">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="w-full h-112 sm:h-64 relative flex items-center justify-center py-32  md:py-64 bg-gray-900">
+    <img class="w-full h-full absolute object-cover opacity-50" src="img/contact-us.jpeg" alt="">
+    <div class="px-6 max-w-4xl relative text-center">
+        <h1 class="text-5xl font-semibold text-white leading-tight tracking-wide">Contact Us</h1>
+        <p class="text-gray-100 font-semibold mt-3 leading-6 tracking-wide">Let’s start a conversation about powerful impact. </p>
+    </div>
+</div>
+
+<div class="bg-white rounded pt-6 pb-8 mb-4 flex flex-col my-2 px-6 lg:px-32">
+    <p class="font-bold text-center">For inquiries and more information on Impact46, </p>
+    <p class="font-bold text-center">contact us at <a :href="'mailto:' + email">{{email}}</a> or complete the form below. </p>
+    <form data-success-redirect="" data-netlify="true" autocomplete="on" method="POST">
+        <input type="hidden" name="form-name" value="form 1">
+
+        <div class="-mx-3 md:flex mt-12">
+            <div class="md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-first-name">
+                    First Name *
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3" id="grid-first-name"
+                       type="text" name="First Name" placeholder="Jane">
+            </div>
+            <div class="md:w-1/2 px-3">
+                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="grid-last-name">
+                    Last Name *
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4" id="grid-last-name"
+                       type="text" name="Last Name" placeholder="Doe">
+            </div>
+        </div>
+        <div class="-mx-3 md:flex mt-6">
+            <div class="md:w-full px-3">
+                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="email-address">
+                    Email Address *
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+                       id="email-address"
+                       type="email" name="Email Address" placeholder="youremail@example.com">
+            </div>
+        </div>
+        <div class="-mx-3 md:flex mt-6">
+            <div class="md:w-full px-3">
+                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="subject">
+                    Subject *
+                </label>
+                <input class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+                       id="subject"
+                       type="text" name="Subject" placeholder="">
+            </div>
+        </div>
+
+        <div class="-mx-3 md:flex mt-6">
+            <div class="md:w-full px-3">
+                <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2" for="message">
+                    Message *
+                </label>
+                <textarea class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-grey-lighter rounded py-3 px-4 mb-3"
+                       id="message"
+                          rows="4"
+                          name="Message"
+                          placeholder=""></textarea>
+            </div>
+        </div>
+
+        <button class="mt-3 px-6 py-2 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded uppercase" type="submit">Submit</button>
+
+    </form>
+
+
+<address class="mt-8 text-gray-900">
+    Impact46 Limited<br>
+    Unit 2005 – CRE Center<br>
+    889 Chueng Sha Wan Road<br>
+    Lai Chi Kok – Hong Kong<br>
+    Tel. (852) 31561696
+</address>
+
+    <p class="mt-8 text-gray-900">Impact46 is compliant with the Laws and Regulations of Hong Kong, including PDPO, the Personal Data Privacy Ordinance (equivalent of the European Union
+        GDPR/RGPD).</p>
+
+    <p class="font-semibold text-gray-900 text-right mt-3">© {{new Date().getFullYear()}} Impact46</p>
+
+</div>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            email: 'impact@impact46.co',
+            isMobileNavOption: false
+        }
+    })
+</script>
+</body>
+</html>
